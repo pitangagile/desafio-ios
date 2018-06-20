@@ -15,6 +15,8 @@
 		4B0F24A120D92678002AC223 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B0F249F20D92678002AC223 /* LaunchScreen.storyboard */; };
 		4B0F24A920D927A0002AC223 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F24A820D927A0002AC223 /* MovieTableViewCell.swift */; };
 		4B0F24AB20D92AD5002AC223 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F24AA20D92AD5002AC223 /* DescriptionViewController.swift */; };
+		4B0F24AD20DA75A2002AC223 /* ApiComunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F24AC20DA75A2002AC223 /* ApiComunication.swift */; };
+		4B0F24B020DA7C0A002AC223 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0F24AF20DA7C0A002AC223 /* Movie.swift */; };
 		C363C433F58E612C1087B55B /* Pods_desafioIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F055F168C44247C32CF96CD7 /* Pods_desafioIOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		4B0F24A220D92678002AC223 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B0F24A820D927A0002AC223 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		4B0F24AA20D92AD5002AC223 /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		4B0F24AC20DA75A2002AC223 /* ApiComunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiComunication.swift; sourceTree = "<group>"; };
+		4B0F24AF20DA7C0A002AC223 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		6177F5E9162B83D811B5CAE7 /* Pods-desafioIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-desafioIOS/Pods-desafioIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CD0F1FE423702E7FE4B30529 /* Pods-desafioIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-desafioIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-desafioIOS/Pods-desafioIOS.release.xcconfig"; sourceTree = "<group>"; };
 		F055F168C44247C32CF96CD7 /* Pods_desafioIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_desafioIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +53,7 @@
 		4B0F248720D9266F002AC223 = {
 			isa = PBXGroup;
 			children = (
+				4B0F24AE20DA7BF7002AC223 /* Models */,
 				4B0F249220D9266F002AC223 /* desafioIOS */,
 				4B0F249120D9266F002AC223 /* Products */,
 				8D3FCDEC2B5863828EE9DE90 /* Pods */,
@@ -76,8 +81,17 @@
 				4B0F249A20D9266F002AC223 /* desafioIOS.xcdatamodeld */,
 				4B0F24A820D927A0002AC223 /* MovieTableViewCell.swift */,
 				4B0F24AA20D92AD5002AC223 /* DescriptionViewController.swift */,
+				4B0F24AC20DA75A2002AC223 /* ApiComunication.swift */,
 			);
 			path = desafioIOS;
+			sourceTree = "<group>";
+		};
+		4B0F24AE20DA7BF7002AC223 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B0F24AF20DA7C0A002AC223 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		8D3FCDEC2B5863828EE9DE90 /* Pods */ = {
@@ -211,11 +225,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0F24B020DA7C0A002AC223 /* Movie.swift in Sources */,
 				4B0F249620D9266F002AC223 /* ViewController.swift in Sources */,
 				4B0F249C20D9266F002AC223 /* desafioIOS.xcdatamodeld in Sources */,
 				4B0F24A920D927A0002AC223 /* MovieTableViewCell.swift in Sources */,
 				4B0F24AB20D92AD5002AC223 /* DescriptionViewController.swift in Sources */,
 				4B0F249420D9266F002AC223 /* AppDelegate.swift in Sources */,
+				4B0F24AD20DA75A2002AC223 /* ApiComunication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +379,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W56H3XPSE5;
 				INFOPLIST_FILE = desafioIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = teste.desafioIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -379,7 +398,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W56H3XPSE5;
 				INFOPLIST_FILE = desafioIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = teste.desafioIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
