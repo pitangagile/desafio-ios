@@ -53,6 +53,8 @@
 		4B0F248720D9266F002AC223 = {
 			isa = PBXGroup;
 			children = (
+				E850567E20DB35DF00CB0D00 /* ViewControllers */,
+				E850567D20DB359900CB0D00 /* RequestHandlers */,
 				4B0F24AE20DA7BF7002AC223 /* Models */,
 				4B0F249220D9266F002AC223 /* desafioIOS */,
 				4B0F249120D9266F002AC223 /* Products */,
@@ -73,15 +75,11 @@
 			isa = PBXGroup;
 			children = (
 				4B0F249320D9266F002AC223 /* AppDelegate.swift */,
-				4B0F249520D9266F002AC223 /* ViewController.swift */,
 				4B0F249720D9266F002AC223 /* Main.storyboard */,
 				4B0F249D20D92678002AC223 /* Assets.xcassets */,
 				4B0F249F20D92678002AC223 /* LaunchScreen.storyboard */,
 				4B0F24A220D92678002AC223 /* Info.plist */,
 				4B0F249A20D9266F002AC223 /* desafioIOS.xcdatamodeld */,
-				4B0F24A820D927A0002AC223 /* MovieTableViewCell.swift */,
-				4B0F24AA20D92AD5002AC223 /* DescriptionViewController.swift */,
-				4B0F24AC20DA75A2002AC223 /* ApiComunication.swift */,
 			);
 			path = desafioIOS;
 			sourceTree = "<group>";
@@ -109,6 +107,24 @@
 				F055F168C44247C32CF96CD7 /* Pods_desafioIOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E850567D20DB359900CB0D00 /* RequestHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				4B0F24AC20DA75A2002AC223 /* ApiComunication.swift */,
+			);
+			path = RequestHandlers;
+			sourceTree = "<group>";
+		};
+		E850567E20DB35DF00CB0D00 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B0F249520D9266F002AC223 /* ViewController.swift */,
+				4B0F24A820D927A0002AC223 /* MovieTableViewCell.swift */,
+				4B0F24AA20D92AD5002AC223 /* DescriptionViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,8 +393,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W56H3XPSE5;
+				DEVELOPMENT_TEAM = 7PFDZE6A86;
 				INFOPLIST_FILE = desafioIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -396,8 +413,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W56H3XPSE5;
+				DEVELOPMENT_TEAM = 7PFDZE6A86;
 				INFOPLIST_FILE = desafioIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

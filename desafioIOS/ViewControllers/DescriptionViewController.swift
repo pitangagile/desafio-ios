@@ -8,6 +8,7 @@
 
 import UIKit
 
+/*Movie details view*/
 class DescriptionViewController: UIViewController {
 
     @IBOutlet weak var movieImage: UIImageView!
@@ -24,6 +25,7 @@ class DescriptionViewController: UIViewController {
         self.movieName.text = name
         self.movieImage.image = image
         
+        //Requesting the movie description
         ApiComunication.getMovieDescription(movieID: movieID, onSuccess: { (detail) in
             self.movieDescription.text = detail
         }) { (error) in
@@ -31,22 +33,10 @@ class DescriptionViewController: UIViewController {
         }
         
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

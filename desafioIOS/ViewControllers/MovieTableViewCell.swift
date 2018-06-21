@@ -8,6 +8,7 @@
 
 import UIKit
 
+/*Basic setting of an movie cell*/
 class MovieTableViewCell: UITableViewCell {
 
     @IBOutlet weak var movieName: UILabel!

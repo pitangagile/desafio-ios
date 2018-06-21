@@ -12,6 +12,7 @@ import Kingfisher
 
 class ApiComunication {
     
+    /*Function that requests a json of movies and returns an array of movies to a completion block when succeeds. When the request fails, it returns an error message to a completion block.*/
     class func getMoviesList(page: Int, size: Int, onSuccess: @escaping (_ movies: [Movie]) -> Void, onFailure: @escaping (_ error: String) -> Void) {
         
         let headers: HTTPHeaders = ["content-type": "application/json"]
@@ -34,7 +35,6 @@ class ApiComunication {
                 return
             }
             var movies: [Movie] = []
-            //var i = 0
             for movie in value {
                 let oneMovie = Movie()
                 if let id = movie["_id"] as? String {
@@ -52,6 +52,7 @@ class ApiComunication {
         }
     }
     
+    /*Function that requests details from one movie at a time. When succeeds, it returns a string containing the movie description. When it fails, returns an error message to a completion block.*/
     class func getMovieDescription(movieID: String, onSuccess: @escaping (_ detail: String) -> Void, onFailure: @escaping (_ error: String) -> Void) {
         
         let headers: HTTPHeaders = ["content-type": "application/json"]
@@ -80,13 +81,12 @@ class ApiComunication {
         
     }
     
+    /*Function that makes the movie image download requisition. When succeeds, it tries to store the image in cash memory (memory or disk) to improve efficiency in future acesses. Then, the function returns the image and the image url to a completion block. When the image isn't downloaded, the function returns an error message to a completion block.*/
     class func imageDownloadTask(imageURL: String, onSuccess: @escaping (_ image: UIImage, _ imageURL: URL) -> Void, onFailure: @escaping (_ error: String) -> Void) {
         let url = URL(string: imageURL)
-        //let imageResponse: UIImage = UIImage()
         let imageView: UIImageView = UIImageView.init()
         imageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, urlImage) in
             if image != nil {
-                //imageResponse = image!
                 onSuccess(image!, urlImage!)
             } else {
                 onFailure("Failed to download movie image.")

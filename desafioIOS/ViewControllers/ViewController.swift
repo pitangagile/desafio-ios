@@ -8,10 +8,14 @@
 
 import UIKit
 
+/*Root (first) view*/
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var data: [Movie] = []
     var page: Int = 0
+    
+    //Loading indicator
+    let indicator:UIActivityIndicatorView = UIActivityIndicatorView  (activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,10 +28,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    /*Function that is called every time the user scrolls to the end of the table view. It handles the synchronous requisition calls in order to load movies page by page to improve internet data consumption.*/
     func handlePagination() {
+        //Loading indicator setting
+        indicator.color = UIColor .gray
+        indicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+        indicator.bringSubview(toFront: self.view)
+        indicator.startAnimating()
+        
+        //Get movies list
         ApiComunication.getMoviesList(page: page, size: 5, onSuccess: { (movies) in
             self.data.append(contentsOf: movies)
             for movie in self.data {
+                //Get each movie image and update the table view cells ascynchronouslly
                 ApiComunication.imageDownloadTask(imageURL: movie.imageURL!, onSuccess: { (image, imageURL) in
                     var i = 0
                     for element in self.data {
@@ -38,6 +53,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                         i += 1
                     }
                     self.tableView.reloadData()
+                    self.indicator.stopAnimating()
+                    self.indicator.hidesWhenStopped = true
                 }, onFailure: { (error) in
                     print(error)
                 })
@@ -49,6 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         page += 1
     }
     
+    /*System function called every time an user end scrolling. In this App it is used to identify when the user scrolls to the end of a table view.*/
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let currentOffset = scrollView.contentOffset.y
         let maxOffset = scrollView.contentSize.height - scrollView.frame.height
@@ -76,6 +94,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    //Data transfering between view controllers before the segue is executed
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segue" {
             let nextView = segue.destination as! DescriptionViewController
