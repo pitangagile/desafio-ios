@@ -7,11 +7,11 @@
 
 import Foundation
 
-let MOVIES_LIST_SIZE = 10
+let MOVIES_LIST_SIZE = 5
 
 //MARK: - URLs
 let URL_listMovies = "https://desafio-mobile-pitang.herokuapp.com/movies/list?page=%d&size=%d"
-let URL_detailMovie = "https://desafio-mobile-pitang.herokuapp.com/movies/detail/%@."
+let URL_detailMovie = "https://desafio-mobile-pitang.herokuapp.com/movies/detail/%@"
 
 //MARK: - Notification objects
 let NOTIFICATION_receivedListMovies = Notification.Name(rawValue: "receivedListMovies")

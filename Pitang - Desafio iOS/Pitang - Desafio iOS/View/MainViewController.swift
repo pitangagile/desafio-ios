@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: - IBOutlets
     @IBOutlet weak var tvMovies: UITableView!
@@ -22,20 +22,15 @@ class MainViewController: UIViewController, UITableViewDataSource {
         mainVM = MainViewModel()
         mainVM?.listMovies(at: 0)
         
-        self.setupNotificationObservers()
+        NotificationCenter.default.addObserver(self, selector: #selector(onReceivedMovieList), name: NOTIFICATION_receivedListMovies, object: nil)
         
         self.tvMovies.dataSource = self
+        self.tvMovies.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    //MARK: - Setup Methods
-    fileprivate func setupNotificationObservers(){
-        NotificationCenter.default.addObserver(self, selector: #selector(onReceivedMovieList), name: NOTIFICATION_receivedListMovies, object: nil)
-        
     }
     
     //MARK: - UITableView Methods
@@ -56,14 +51,43 @@ class MainViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "segueDetailMovie", sender: self.mainVM?.moviesList[indexPath.row])
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let  height = scrollView.frame.size.height
+        let contentYoffset = scrollView.contentOffset.y
+        let distanceFromBottom = scrollView.contentSize.height - contentYoffset
+        if distanceFromBottom < height {
+            
+            if let mainVM = self.mainVM {
+                mainVM.listMovies(at: mainVM.lastPage + 1)
+            }
+            
+        }
+    }
+    
     //MARK: - Other Methods
     @objc func onReceivedMovieList(notification: Notification?){
-        if let error = notification?.object as? NSError {
-            AlertHelper.showDefaultSimpleAlert(title: "Ops!", mensage: error.domain, parent: self, buttonTitle: "Retry") {
-                self.mainVM?.listMovies(at: (self.mainVM?.lastPage)!)
+        DispatchQueue.main.async {
+            if let error = notification?.object as? NSError {
+                AlertHelper.showDefaultSimpleAlert(title: "Ops!", mensage: error.domain, parent: self, buttonTitle: "Retry") {
+                    self.mainVM?.listMovies(at: (self.mainVM?.lastPage)!)
+                }
+            }else{
+                self.tvMovies.reloadData()
             }
-        }else{
-            self.tvMovies.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segueDetailMovie"){
+            if let detail = segue.destination as? DetailViewController, let movie = sender as? MovieModel {
+                detail.detailVM = DetailViewModel()
+                detail.detailVM?.movie = movie
+                
+            }
         }
     }
 }

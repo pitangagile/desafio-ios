@@ -20,6 +20,8 @@
 		EC97FEDC20DBE0E7003A2609 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEDB20DBE0E7003A2609 /* Extensions.swift */; };
 		EC97FEDE20DBE4BA003A2609 /* ServiceRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEDD20DBE4BA003A2609 /* ServiceRequestModel.swift */; };
 		EC97FEE120DC1926003A2609 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEE020DC1926003A2609 /* AlertHelper.swift */; };
+		EC97FEE320DC23C1003A2609 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEE220DC23C1003A2609 /* DetailViewController.swift */; };
+		EC97FEE520DC2F6E003A2609 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEE420DC2F6E003A2609 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		EC97FEDB20DBE0E7003A2609 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EC97FEDD20DBE4BA003A2609 /* ServiceRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestModel.swift; sourceTree = "<group>"; };
 		EC97FEE020DC1926003A2609 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		EC97FEE220DC23C1003A2609 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EC97FEE420DC2F6E003A2609 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				EC74B4BC20DAAF9F0002A585 /* MainViewModel.swift */,
+				EC97FEE420DC2F6E003A2609 /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			children = (
 				EC74B4A420DAA6570002A585 /* Main.storyboard */,
 				EC74B4BA20DAAF290002A585 /* MainViewController.swift */,
+				EC97FEE220DC23C1003A2609 /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -263,7 +269,9 @@
 				EC74B4BD20DAAF9F0002A585 /* MainViewModel.swift in Sources */,
 				EC74B4BF20DAB1170002A585 /* Constants.swift in Sources */,
 				EC97FEE120DC1926003A2609 /* AlertHelper.swift in Sources */,
+				EC97FEE320DC23C1003A2609 /* DetailViewController.swift in Sources */,
 				EC97FEDC20DBE0E7003A2609 /* Extensions.swift in Sources */,
+				EC97FEE520DC2F6E003A2609 /* DetailViewModel.swift in Sources */,
 				EC97FEDE20DBE4BA003A2609 /* ServiceRequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,7 +30,10 @@ class MainViewModel : NSObject {
                     self.moviesList.append( MovieModel.convertToModel(dictionary: obj) )
                 }
                 
-                NotificationCenter.default.post(name: NOTIFICATION_receivedListMovies, object: nil)
+                if(arrMovies.count > 0){
+                    NotificationCenter.default.post(name: NOTIFICATION_receivedListMovies, object: nil)
+                }
+                
             }else{
                 let err = NSError(domain: "The server behaved unexpectedly :( Try again later!", code: 002, userInfo: nil)
                 NotificationCenter.default.post(name: NOTIFICATION_receivedListMovies, object: err)
@@ -38,4 +41,5 @@ class MainViewModel : NSObject {
         }
         
     }
+
 }
