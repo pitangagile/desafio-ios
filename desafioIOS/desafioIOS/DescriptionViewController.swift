@@ -10,11 +10,28 @@ import UIKit
 
 class DescriptionViewController: UIViewController {
 
+    @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var movieName: UILabel!
+    @IBOutlet weak var movieDescription: UITextView!
+    
+    var image: UIImage?
+    var name: String?
+    var detail: String?
+    var movieID: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.movieName.text = name
+        self.movieImage.image = image
+        
+        ApiComunication.getMovieDescription(movieID: movieID, onSuccess: { (detail) in
+            self.movieDescription.text = detail
+        }) { (error) in
+            print(error)
+        }
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -11,8 +11,18 @@ import UIKit
 
 class Movie {
     
-    var image: UIImage = UIImage()
-    var name: String = ""
-    var description: String = ""
+    var id: String?
+    var image: UIImage?
+    var name: String?
+    var description: String?
+    var imageURL: String?
+    
+    init() {
+        self.id = ""
+        self.image = UIImage.init()
+        self.name = ""
+        self.description = ""
+        self.imageURL = ""
+    }
     
 }
