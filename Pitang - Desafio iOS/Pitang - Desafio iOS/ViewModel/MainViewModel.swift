@@ -12,9 +12,10 @@ class MainViewModel : NSObject {
     
     var moviesList:[MovieModel] = []
     var lastPage = 0
+    var countSize = 0
     
     func listMovies(at page: Int){
-        let request = ServiceRequestModel().getListMoviesRequest(with: page, and: MOVIES_LIST_SIZE)
+        let request = ServiceRequestModel().getListMoviesRequest(with: page, and: self.countSize)
         
         self.lastPage = page
         

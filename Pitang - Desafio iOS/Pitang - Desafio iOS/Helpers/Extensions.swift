@@ -13,7 +13,7 @@ extension UITableViewCell {
     func setupCell(using model: MovieModel?){
         if let model = model {
             self.accessoryType = .disclosureIndicator
-            ServiceHelper.downloadImage(url: model.imageUrl!, id: model.id!) { (image) in
+            ServiceHelper.downloadImage(url: model.imageUrl!, id: model.id!, rounded: true) { (image) in
                 DispatchQueue.main.async {
                     self.imageView?.image = image ?? #imageLiteral(resourceName: "icon-error")
                     self.textLabel?.text = model.name

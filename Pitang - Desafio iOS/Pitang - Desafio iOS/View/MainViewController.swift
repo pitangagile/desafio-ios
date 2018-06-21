@@ -9,6 +9,8 @@ import UIKit
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let CELL_HEIGHT:CGFloat = 60.0
+    
     //MARK: - IBOutlets
     @IBOutlet weak var tvMovies: UITableView!
     
@@ -20,12 +22,17 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         mainVM = MainViewModel()
-        mainVM?.listMovies(at: 0)
         
         NotificationCenter.default.addObserver(self, selector: #selector(onReceivedMovieList), name: NOTIFICATION_receivedListMovies, object: nil)
         
         self.tvMovies.dataSource = self
         self.tvMovies.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        mainVM?.countSize = Int(self.tvMovies.frame.height / CELL_HEIGHT) + 1
+        mainVM?.listMovies(at: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,6 +61,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "segueDetailMovie", sender: self.mainVM?.moviesList[indexPath.row])
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CELL_HEIGHT
+    }
+    
+    //MARK: - ScrollView Methods
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let  height = scrollView.frame.size.height

@@ -24,7 +24,7 @@ class ServiceHelper : NSObject {
         }
     }
     
-    static func downloadImage(url: String, id: String, completion: @escaping(UIImage?)->Void){
+    static func downloadImage(url: String, id: String, rounded:Bool = false, completion: @escaping(UIImage?)->Void){
         
         let cache = NSCache<NSString, UIImage>()
         if let cache = cache.object(forKey: id as NSString){
@@ -34,7 +34,10 @@ class ServiceHelper : NSObject {
             Alamofire.request(url).responseImage { (response) in
                 if let imageData = response.result.value {
                     cache.setObject(imageData, forKey: id as NSString)
-                    completion(imageData)
+                    
+                    let img = rounded ? imageData.af_imageRoundedIntoCircle() : imageData
+                    
+                    completion(img)
                     
                 }else{
                     completion(nil)

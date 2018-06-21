@@ -22,10 +22,15 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         NotificationCenter.default.addObserver(self, selector: #selector(onReceivedDetailMovie), name: NOTIFICATION_receivedListMovies, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationItem.title = "Detalhes"
+        
         if let detailVM = self.detailVM, let movie = detailVM.movie {
             detailVM.detailMovie(id: movie.id!)
         }
