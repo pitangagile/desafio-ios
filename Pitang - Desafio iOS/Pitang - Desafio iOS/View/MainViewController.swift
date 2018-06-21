@@ -22,17 +22,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         mainVM = MainViewModel()
+        mainVM?.countSize = Int(UIScreen.main.bounds.size.height / CELL_HEIGHT)
+        mainVM?.listMovies(at: 0)
         
         NotificationCenter.default.addObserver(self, selector: #selector(onReceivedMovieList), name: NOTIFICATION_receivedListMovies, object: nil)
         
         self.tvMovies.dataSource = self
         self.tvMovies.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        mainVM?.countSize = Int(self.tvMovies.frame.height / CELL_HEIGHT) + 1
-        mainVM?.listMovies(at: 0)
     }
 
     override func didReceiveMemoryWarning() {
