@@ -1,0 +1,442 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1191A2CA7662A4AB24525732 /* Pods_Desafio_Pitang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EC374F132CC219AFD37A51 /* Pods_Desafio_Pitang.framework */; };
+		90B9F4D720DC294200F097D1 /* PitangMoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */; };
+		90B9F4D920DC2FB900F097D1 /* PitangMovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4D820DC2FB900F097D1 /* PitangMovieDataStore.swift */; };
+		90B9F4DC20DC330800F097D1 /* MoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4DB20DC330800F097D1 /* MoviePreview.swift */; };
+		90FEFB3820DBC1CE004865DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FEFB3720DBC1CE004865DC /* AppDelegate.swift */; };
+		90FEFB3A20DBC1CE004865DC /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FEFB3920DBC1CE004865DC /* MoviesViewController.swift */; };
+		90FEFB3D20DBC1CE004865DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FEFB3B20DBC1CE004865DC /* Main.storyboard */; };
+		90FEFB3F20DBC1D0004865DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90FEFB3E20DBC1D0004865DC /* Assets.xcassets */; };
+		90FEFB4220DBC1D0004865DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FEFB4020DBC1D0004865DC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8B22696EB1964BFBEE7A0BB3 /* Pods-Desafio Pitang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio Pitang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio Pitang/Pods-Desafio Pitang.release.xcconfig"; sourceTree = "<group>"; };
+		90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitangMoviesAPI.swift; sourceTree = "<group>"; };
+		90B9F4D820DC2FB900F097D1 /* PitangMovieDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitangMovieDataStore.swift; sourceTree = "<group>"; };
+		90B9F4DB20DC330800F097D1 /* MoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreview.swift; sourceTree = "<group>"; };
+		90FEFB3420DBC1CE004865DC /* Desafio Pitang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio Pitang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		90FEFB3720DBC1CE004865DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90FEFB3920DBC1CE004865DC /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		90FEFB3C20DBC1CE004865DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		90FEFB3E20DBC1D0004865DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90FEFB4120DBC1D0004865DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90FEFB4320DBC1D0004865DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E246653372D0700A1D0F22D7 /* Pods-Desafio Pitang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio Pitang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio Pitang/Pods-Desafio Pitang.debug.xcconfig"; sourceTree = "<group>"; };
+		E9EC374F132CC219AFD37A51 /* Pods_Desafio_Pitang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Desafio_Pitang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90FEFB3120DBC1CD004865DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1191A2CA7662A4AB24525732 /* Pods_Desafio_Pitang.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		564E87B6196C09982BA2E910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC374F132CC219AFD37A51 /* Pods_Desafio_Pitang.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90B9F4DA20DC32E400F097D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90B9F4DB20DC330800F097D1 /* MoviePreview.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		90FEFB2B20DBC1CD004865DC = {
+			isa = PBXGroup;
+			children = (
+				90FEFB3620DBC1CE004865DC /* Desafio Pitang */,
+				90FEFB3520DBC1CE004865DC /* Products */,
+				91467D90BBDFF0FD384CBDB9 /* Pods */,
+				564E87B6196C09982BA2E910 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		90FEFB3520DBC1CE004865DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90FEFB3420DBC1CE004865DC /* Desafio Pitang.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90FEFB3620DBC1CE004865DC /* Desafio Pitang */ = {
+			isa = PBXGroup;
+			children = (
+				90B9F4DA20DC32E400F097D1 /* Models */,
+				90FEFB4920DBC25B004865DC /* Layouts */,
+				90FEFB3720DBC1CE004865DC /* AppDelegate.swift */,
+				90FEFB3920DBC1CE004865DC /* MoviesViewController.swift */,
+				90FEFB3E20DBC1D0004865DC /* Assets.xcassets */,
+				90FEFB4020DBC1D0004865DC /* LaunchScreen.storyboard */,
+				90FEFB4320DBC1D0004865DC /* Info.plist */,
+				90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */,
+				90B9F4D820DC2FB900F097D1 /* PitangMovieDataStore.swift */,
+			);
+			path = "Desafio Pitang";
+			sourceTree = "<group>";
+		};
+		90FEFB4920DBC25B004865DC /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				90FEFB3B20DBC1CE004865DC /* Main.storyboard */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		91467D90BBDFF0FD384CBDB9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E246653372D0700A1D0F22D7 /* Pods-Desafio Pitang.debug.xcconfig */,
+				8B22696EB1964BFBEE7A0BB3 /* Pods-Desafio Pitang.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90FEFB3320DBC1CD004865DC /* Desafio Pitang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90FEFB4620DBC1D0004865DC /* Build configuration list for PBXNativeTarget "Desafio Pitang" */;
+			buildPhases = (
+				449E0569FB4D25C2853108F8 /* [CP] Check Pods Manifest.lock */,
+				90FEFB3020DBC1CD004865DC /* Sources */,
+				90FEFB3120DBC1CD004865DC /* Frameworks */,
+				90FEFB3220DBC1CD004865DC /* Resources */,
+				0C693283503CE11A58CAEDCF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Desafio Pitang";
+			productName = "Desafio Pitang";
+			productReference = 90FEFB3420DBC1CE004865DC /* Desafio Pitang.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90FEFB2C20DBC1CD004865DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Filipe Jordão";
+				TargetAttributes = {
+					90FEFB3320DBC1CD004865DC = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 90FEFB2F20DBC1CD004865DC /* Build configuration list for PBXProject "Desafio Pitang" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 90FEFB2B20DBC1CD004865DC;
+			productRefGroup = 90FEFB3520DBC1CE004865DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90FEFB3320DBC1CD004865DC /* Desafio Pitang */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90FEFB3220DBC1CD004865DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90FEFB4220DBC1D0004865DC /* LaunchScreen.storyboard in Resources */,
+				90FEFB3F20DBC1D0004865DC /* Assets.xcassets in Resources */,
+				90FEFB3D20DBC1CE004865DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C693283503CE11A58CAEDCF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Desafio Pitang/Pods-Desafio Pitang-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Desafio Pitang/Pods-Desafio Pitang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		449E0569FB4D25C2853108F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Desafio Pitang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90FEFB3020DBC1CD004865DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90B9F4DC20DC330800F097D1 /* MoviePreview.swift in Sources */,
+				90FEFB3A20DBC1CE004865DC /* MoviesViewController.swift in Sources */,
+				90B9F4D720DC294200F097D1 /* PitangMoviesAPI.swift in Sources */,
+				90FEFB3820DBC1CE004865DC /* AppDelegate.swift in Sources */,
+				90B9F4D920DC2FB900F097D1 /* PitangMovieDataStore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		90FEFB3B20DBC1CE004865DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90FEFB3C20DBC1CE004865DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		90FEFB4020DBC1D0004865DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90FEFB4120DBC1D0004865DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90FEFB4420DBC1D0004865DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		90FEFB4520DBC1D0004865DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90FEFB4720DBC1D0004865DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E246653372D0700A1D0F22D7 /* Pods-Desafio Pitang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R9WHX95423;
+				INFOPLIST_FILE = "Desafio Pitang/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "FJ.Desafio-Pitang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90FEFB4820DBC1D0004865DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B22696EB1964BFBEE7A0BB3 /* Pods-Desafio Pitang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R9WHX95423;
+				INFOPLIST_FILE = "Desafio Pitang/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "FJ.Desafio-Pitang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90FEFB2F20DBC1CD004865DC /* Build configuration list for PBXProject "Desafio Pitang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90FEFB4420DBC1D0004865DC /* Debug */,
+				90FEFB4520DBC1D0004865DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90FEFB4620DBC1D0004865DC /* Build configuration list for PBXNativeTarget "Desafio Pitang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90FEFB4720DBC1D0004865DC /* Debug */,
+				90FEFB4820DBC1D0004865DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90FEFB2C20DBC1CD004865DC /* Project object */;
+}
