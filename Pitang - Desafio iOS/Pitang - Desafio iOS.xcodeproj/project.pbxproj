@@ -17,6 +17,9 @@
 		EC74B4BF20DAB1170002A585 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC74B4BE20DAB1170002A585 /* Constants.swift */; };
 		EC74B4C220DAB42D0002A585 /* ServiceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC74B4C120DAB42D0002A585 /* ServiceHelper.swift */; };
 		EC74B4C420DAC0BC0002A585 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC74B4C320DAC0BC0002A585 /* MovieModel.swift */; };
+		EC97FEDC20DBE0E7003A2609 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEDB20DBE0E7003A2609 /* Extensions.swift */; };
+		EC97FEDE20DBE4BA003A2609 /* ServiceRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEDD20DBE4BA003A2609 /* ServiceRequestModel.swift */; };
+		EC97FEE120DC1926003A2609 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC97FEE020DC1926003A2609 /* AlertHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		EC74B4BE20DAB1170002A585 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EC74B4C120DAB42D0002A585 /* ServiceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelper.swift; sourceTree = "<group>"; };
 		EC74B4C320DAC0BC0002A585 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		EC97FEDB20DBE0E7003A2609 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EC97FEDD20DBE4BA003A2609 /* ServiceRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestModel.swift; sourceTree = "<group>"; };
+		EC97FEE020DC1926003A2609 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +92,7 @@
 		EC74B49F20DAA6570002A585 /* Pitang - Desafio iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EC74B4C020DAB41B0002A585 /* Helper */,
+				EC74B4C020DAB41B0002A585 /* Helpers */,
 				EC74B4B520DAAA5C0002A585 /* View */,
 				EC74B4B420DAAA4C0002A585 /* ViewModel */,
 				EC74B4B320DAAA440002A585 /* Model */,
@@ -103,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				EC74B4C320DAC0BC0002A585 /* MovieModel.swift */,
+				EC97FEDD20DBE4BA003A2609 /* ServiceRequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,12 +131,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		EC74B4C020DAB41B0002A585 /* Helper */ = {
+		EC74B4C020DAB41B0002A585 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				EC74B4C120DAB42D0002A585 /* ServiceHelper.swift */,
+				EC97FEDB20DBE0E7003A2609 /* Extensions.swift */,
+				EC97FEE020DC1926003A2609 /* AlertHelper.swift */,
 			);
-			path = Helper;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,11 +217,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pitang - Desafio iOS/Pods-Pitang - Desafio iOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +262,9 @@
 				EC74B4BB20DAAF290002A585 /* MainViewController.swift in Sources */,
 				EC74B4BD20DAAF9F0002A585 /* MainViewModel.swift in Sources */,
 				EC74B4BF20DAB1170002A585 /* Constants.swift in Sources */,
+				EC97FEE120DC1926003A2609 /* AlertHelper.swift in Sources */,
+				EC97FEDC20DBE0E7003A2609 /* Extensions.swift in Sources */,
+				EC97FEDE20DBE4BA003A2609 /* ServiceRequestModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
