@@ -81,7 +81,7 @@ class ApiComunication {
         
     }
     
-    /*Function that makes the movie image download requisition. When succeeds, it tries to store the image in cash memory (memory or disk) to improve efficiency in future acesses. Then, the function returns the image and the image url to a completion block. When the image isn't downloaded, the function returns an error message to a completion block.*/
+    /*Function that makes the movie image download requisition. When succeeds, it tries to store the image in cache memory (memory or disk) to improve efficiency in future acesses. Then, the function returns the image and the image url to a completion block. When the image isn't downloaded, the function returns an error message to a completion block.*/
     class func imageDownloadTask(imageURL: String, onSuccess: @escaping (_ image: UIImage, _ imageURL: URL) -> Void, onFailure: @escaping (_ error: String) -> Void) {
         let url = URL(string: imageURL)
         let imageView: UIImageView = UIImageView.init()
