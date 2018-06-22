@@ -14,11 +14,12 @@ class MoviesViewModel {
     
     let movies = BehaviorRelay<[MovieCellViewModel]>(value: [])
     let errorMessage = BehaviorRelay<String?>(value: nil)
-    let isLoaded = BehaviorRelay<Bool>(value: false)
+    let showLoadPopup = BehaviorRelay<Bool>(value: true)
     
     let dataStore = PitangMovieDataStore()
     
     func loadMovies(page: Int) {
+        self.showLoadPopup.accept(true)
         self.dataStore
             .moviesList(page: page, pageSize: 6)
             .map(self.viewModels)
@@ -32,7 +33,7 @@ class MoviesViewModel {
                     self.errorMessage.accept("Ooops... Something went wrong")
                     
                 case .completed:
-                    self.isLoaded.accept(true)
+                    self.showLoadPopup.accept(false)
                 }
             }.disposed(by: self.disposeBag)
     }

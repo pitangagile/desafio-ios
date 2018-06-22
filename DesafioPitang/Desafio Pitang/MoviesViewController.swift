@@ -23,6 +23,8 @@ class MoviesViewController: UIViewController {
         self.title = "Movies"
         super.viewDidLoad()
     
+        
+        self.setupActivityIndicator()
         self.setupCellsHeight()
         self.setupPaging()
         self.setupCellLoading()
@@ -31,21 +33,28 @@ class MoviesViewController: UIViewController {
         self.setupErrorHandling()
     }
     
+    private func setupActivityIndicator() {
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        spinner.startAnimating()
+        spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+
+        self.tableView.tableFooterView = spinner
+        self.tableView.tableFooterView?.isHidden = true
+    }
+    
     private func setupCellsHeight() {
         self.tableView.rowHeight = 300
         self.tableView.estimatedRowHeight = 0.0
     }
     
     private func setupLoading() {
-        self.viewModel.isLoaded
-            .bind { (isLoaded) in
-                if !isLoaded {
-                    SVProgressHUD.show()
-                } else {
-                    SVProgressHUD.dismiss()
-                }
-            }
-            .disposed(by: self.disposeBag)
+        if let loadingView = self.tableView.tableFooterView {
+            self.viewModel.showLoadPopup
+                .map{!$0}
+                .debug("isHidden")
+                .bind(to: loadingView.rx.isHidden)
+                .disposed(by: self.disposeBag)
+        }
     }
     
     private func setupErrorHandling() {
