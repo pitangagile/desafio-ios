@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1191A2CA7662A4AB24525732 /* Pods_Desafio_Pitang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EC374F132CC219AFD37A51 /* Pods_Desafio_Pitang.framework */; };
+		90357B2920DD4D9900EC6977 /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90357B2820DD4D9900EC6977 /* RoundBorderView.swift */; };
+		90357B2C20DD4F7A00EC6977 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90357B2B20DD4F7A00EC6977 /* GradientView.swift */; };
 		90B9F4D720DC294200F097D1 /* PitangMoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */; };
 		90B9F4D920DC2FB900F097D1 /* PitangMovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4D820DC2FB900F097D1 /* PitangMovieDataStore.swift */; };
 		90B9F4DC20DC330800F097D1 /* MoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4DB20DC330800F097D1 /* MoviePreview.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		8B22696EB1964BFBEE7A0BB3 /* Pods-Desafio Pitang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Desafio Pitang.release.xcconfig"; path = "Pods/Target Support Files/Pods-Desafio Pitang/Pods-Desafio Pitang.release.xcconfig"; sourceTree = "<group>"; };
+		90357B2820DD4D9900EC6977 /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
+		90357B2B20DD4F7A00EC6977 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitangMoviesAPI.swift; sourceTree = "<group>"; };
 		90B9F4D820DC2FB900F097D1 /* PitangMovieDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitangMovieDataStore.swift; sourceTree = "<group>"; };
 		90B9F4DB20DC330800F097D1 /* MoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreview.swift; sourceTree = "<group>"; };
@@ -70,6 +74,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		90357B2A20DD4F6900EC6977 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				90357B2820DD4D9900EC6977 /* RoundBorderView.swift */,
+				90357B2B20DD4F7A00EC6977 /* GradientView.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		90B9F4DA20DC32E400F097D1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,13 +113,13 @@
 		90FEFB3620DBC1CE004865DC /* Desafio Pitang */ = {
 			isa = PBXGroup;
 			children = (
+				90357B2A20DD4F6900EC6977 /* Util */,
 				90FFC7EC20DC82C000763008 /* MovieDetails */,
 				90FFC7E020DC757000763008 /* Movies */,
 				90B9F4DA20DC32E400F097D1 /* Models */,
 				90FEFB4920DBC25B004865DC /* Layouts */,
 				90FEFB3720DBC1CE004865DC /* AppDelegate.swift */,
 				90FEFB3E20DBC1D0004865DC /* Assets.xcassets */,
-				90FEFB4020DBC1D0004865DC /* LaunchScreen.storyboard */,
 				90FEFB4320DBC1D0004865DC /* Info.plist */,
 				90FFC7EA20DC801C00763008 /* R.generated.swift */,
 				90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */,
@@ -119,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				90FEFB3B20DBC1CE004865DC /* Main.storyboard */,
+				90FEFB4020DBC1D0004865DC /* LaunchScreen.storyboard */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -284,7 +298,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"";
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -295,6 +309,7 @@
 			files = (
 				90B9F4DC20DC330800F097D1 /* MoviePreview.swift in Sources */,
 				90B9F4DE20DC384800F097D1 /* MoviesViewModel.swift in Sources */,
+				90357B2C20DD4F7A00EC6977 /* GradientView.swift in Sources */,
 				90FFC7E620DC7E1100763008 /* Router.swift in Sources */,
 				90FFC7E420DC799000763008 /* Movie.swift in Sources */,
 				90FEFB3A20DBC1CE004865DC /* MoviesViewController.swift in Sources */,
@@ -304,6 +319,7 @@
 				90FFC7F020DC834300763008 /* MovieDetailsViewModel.swift in Sources */,
 				90FFC7EE20DC82D500763008 /* MovieDetailsViewController.swift in Sources */,
 				90B9F4E020DC3C9400F097D1 /* MovieViewCell.swift in Sources */,
+				90357B2920DD4D9900EC6977 /* RoundBorderView.swift in Sources */,
 				90FFC7EB20DC801C00763008 /* R.generated.swift in Sources */,
 				90FFC7E220DC759800763008 /* MovieCellViewModel.swift in Sources */,
 			);
@@ -453,11 +469,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9WHX95423;
 				INFOPLIST_FILE = "Desafio Pitang/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "FJ.Desafio-Pitang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -469,11 +488,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R9WHX95423;
 				INFOPLIST_FILE = "Desafio Pitang/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "FJ.Desafio-Pitang";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

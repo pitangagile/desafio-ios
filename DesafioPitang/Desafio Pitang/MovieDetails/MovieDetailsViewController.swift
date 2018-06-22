@@ -17,9 +17,15 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var movieImageView: UIImageView!
     @IBOutlet weak var movieDescriptionTextView: UITextView!
  
+    @IBOutlet weak var movieNameLabel: UILabel!
+    
     var viewModel: MovieDetailsViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupBindings()
+    }
+    
+    private func setupBindings() {
         self.viewModel?.isLoaded
             .asObservable()
             .bind(onNext: { (isLoaded) in
@@ -50,6 +56,11 @@ class MovieDetailsViewController: UIViewController {
             .bind(to: self.rx.title)
             .disposed(by: self.disposeBag)
         
+        self.viewModel?.title
+            .asObservable()
+            .bind(to: self.movieNameLabel.rx.text)
+            .disposed(by: self.disposeBag)
+        
         self.viewModel?.errorMessage
             .asObservable()
             .bind(onNext: { (errorMessage) in
@@ -58,6 +69,7 @@ class MovieDetailsViewController: UIViewController {
                 }
             })
             .disposed(by: self.disposeBag)
+
     }
     
 }

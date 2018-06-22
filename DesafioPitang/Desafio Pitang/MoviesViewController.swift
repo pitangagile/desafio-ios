@@ -32,7 +32,7 @@ class MoviesViewController: UIViewController {
     }
     
     private func setupCellsHeight() {
-        self.tableView.rowHeight = 200
+        self.tableView.rowHeight = 300
         self.tableView.estimatedRowHeight = 0.0
     }
     
@@ -57,7 +57,7 @@ class MoviesViewController: UIViewController {
             }.disposed(by: self.disposeBag)
     }
     
-    private func setupPaging() {
+    private func setupCellLoading() {
         self.viewModel.movies.asObservable()
             .bind(to:self.tableView.rx.items(
                     cellIdentifier: MovieViewCell.identifier,
@@ -77,7 +77,7 @@ class MoviesViewController: UIViewController {
             }.disposed(by: self.disposeBag)
     }
     
-    private func setupCellLoading() {
+    private func setupPaging() {
         self.tableView.rx
             .contentOffset
             .asObservable()
