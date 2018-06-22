@@ -23,17 +23,10 @@ class PitangMovieDataStore {
     }
     
     func movieDetail(id: String) -> Observable<Movie> {
-        self.provider.rx
-            .request(.movieDetail(id: id))
-            .mapJSON()
-            .subscribe { (event) in
-               print(event)
-        }
-        
         return
             self.provider.rx
-            .request(.movieDetail(id: id))
-            .map(Movie.self)
-            .asObservable()
+                .request(.movieDetail(id: id))
+                .map(Movie.self)
+                .asObservable()
     }
 }

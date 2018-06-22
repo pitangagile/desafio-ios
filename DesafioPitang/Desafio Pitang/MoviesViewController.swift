@@ -22,15 +22,20 @@ class MoviesViewController: UIViewController {
     override func viewDidLoad() {
         self.title = "Movies"
         super.viewDidLoad()
-        self.tableView.rowHeight = 200
     
-        
+        self.setupCellsHeight()
         self.setupPaging()
         self.setupCellLoading()
         self.setupSelectCell()
         self.setupLoading()
         self.setupErrorHandling()
     }
+    
+    private func setupCellsHeight() {
+        self.tableView.rowHeight = 200
+        self.tableView.estimatedRowHeight = 0.0
+    }
+    
     private func setupLoading() {
         self.viewModel.isLoaded
             .bind { (isLoaded) in
@@ -42,6 +47,7 @@ class MoviesViewController: UIViewController {
             }
             .disposed(by: self.disposeBag)
     }
+    
     private func setupErrorHandling() {
         self.viewModel.errorMessage
             .bind { (errorMessage) in

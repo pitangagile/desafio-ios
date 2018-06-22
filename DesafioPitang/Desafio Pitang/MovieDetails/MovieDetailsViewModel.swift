@@ -17,9 +17,10 @@ class MovieDetailsViewModel {
     let isLoaded = BehaviorRelay<Bool>(value: false)
     let errorMessage = BehaviorRelay<String?>(value: nil)
     
+    private let movieDataStore = PitangMovieDataStore()
+    
     init(movieId: String) {
-        PitangMovieDataStore()
-            .movieDetail(id: movieId)
+        self.movieDataStore.movieDetail(id: movieId)
             .subscribe({ (event) in
                 switch event {
                 case let .next(movie):
