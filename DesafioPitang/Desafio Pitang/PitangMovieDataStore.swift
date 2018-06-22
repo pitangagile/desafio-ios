@@ -14,11 +14,26 @@ import Moya
 class PitangMovieDataStore {
     let provider = MoyaProvider<PitangMoviesAPI>()
     
-    func moviesList(page: Int, pageSize: Int) -> Observable<[MoviePreview]>{
+    func moviesList(page: Int, pageSize: Int) -> Observable<[MoviePreview]> {
         return
             self.provider.rx
             .request(.movies(page: page, pageSize: pageSize))
             .map([MoviePreview].self)
             .asObservable()
+    }
+    
+    func movieDetail(id: String) -> Observable<Movie> {
+        self.provider.rx
+            .request(.movieDetail(id: id))
+            .mapJSON()
+            .subscribe { (event) in
+               print(event)
         }
+        
+        return
+            self.provider.rx
+            .request(.movieDetail(id: id))
+            .map(Movie.self)
+            .asObservable()
+    }
 }

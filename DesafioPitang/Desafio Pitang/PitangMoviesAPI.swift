@@ -8,7 +8,6 @@
 
 import Foundation
 import Moya
-
 enum PitangMoviesAPI {
     case movies(page: Int, pageSize: Int)
     case movieDetail(id: String)
@@ -24,7 +23,7 @@ extension PitangMoviesAPI : TargetType {
         case .movies:
             return "/movies/list"
         case .movieDetail(let id):
-            return "/movies/details/\(id)"
+            return "/movies/detail/\(id)"
         }
     }
     
