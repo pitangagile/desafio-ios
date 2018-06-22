@@ -11,6 +11,8 @@
 		90B9F4D720DC294200F097D1 /* PitangMoviesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */; };
 		90B9F4D920DC2FB900F097D1 /* PitangMovieDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4D820DC2FB900F097D1 /* PitangMovieDataStore.swift */; };
 		90B9F4DC20DC330800F097D1 /* MoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4DB20DC330800F097D1 /* MoviePreview.swift */; };
+		90B9F4DE20DC384800F097D1 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4DD20DC384800F097D1 /* MoviesViewModel.swift */; };
+		90B9F4E020DC3C9400F097D1 /* MovieViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B9F4DF20DC3C9400F097D1 /* MovieViewCell.swift */; };
 		90FEFB3820DBC1CE004865DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FEFB3720DBC1CE004865DC /* AppDelegate.swift */; };
 		90FEFB3A20DBC1CE004865DC /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FEFB3920DBC1CE004865DC /* MoviesViewController.swift */; };
 		90FEFB3D20DBC1CE004865DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90FEFB3B20DBC1CE004865DC /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		90B9F4D620DC294200F097D1 /* PitangMoviesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitangMoviesAPI.swift; sourceTree = "<group>"; };
 		90B9F4D820DC2FB900F097D1 /* PitangMovieDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitangMovieDataStore.swift; sourceTree = "<group>"; };
 		90B9F4DB20DC330800F097D1 /* MoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreview.swift; sourceTree = "<group>"; };
+		90B9F4DD20DC384800F097D1 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
+		90B9F4DF20DC3C9400F097D1 /* MovieViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewCell.swift; sourceTree = "<group>"; };
 		90FEFB3420DBC1CE004865DC /* Desafio Pitang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio Pitang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		90FEFB3720DBC1CE004865DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90FEFB3920DBC1CE004865DC /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				90FEFB4920DBC25B004865DC /* Layouts */,
 				90FEFB3720DBC1CE004865DC /* AppDelegate.swift */,
 				90FEFB3920DBC1CE004865DC /* MoviesViewController.swift */,
+				90B9F4DF20DC3C9400F097D1 /* MovieViewCell.swift */,
+				90B9F4DD20DC384800F097D1 /* MoviesViewModel.swift */,
 				90FEFB3E20DBC1D0004865DC /* Assets.xcassets */,
 				90FEFB4020DBC1D0004865DC /* LaunchScreen.storyboard */,
 				90FEFB4320DBC1D0004865DC /* Info.plist */,
@@ -191,6 +197,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Desafio Pitang/Pods-Desafio Pitang-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -199,6 +206,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -234,10 +242,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90B9F4DC20DC330800F097D1 /* MoviePreview.swift in Sources */,
+				90B9F4DE20DC384800F097D1 /* MoviesViewModel.swift in Sources */,
 				90FEFB3A20DBC1CE004865DC /* MoviesViewController.swift in Sources */,
 				90B9F4D720DC294200F097D1 /* PitangMoviesAPI.swift in Sources */,
 				90FEFB3820DBC1CE004865DC /* AppDelegate.swift in Sources */,
 				90B9F4D920DC2FB900F097D1 /* PitangMovieDataStore.swift in Sources */,
+				90B9F4E020DC3C9400F097D1 /* MovieViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
