@@ -27,7 +27,7 @@ Criar um aplicativo para consultar a API de Filmes e trazer os filmes enviados p
 
 * Utilização de Storyboards
 * Arquitetura MVVM
-* Cache de imagens e da API
+* Cache das imagens
 
 ### **Sugestões** ###
 
