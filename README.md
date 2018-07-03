@@ -19,7 +19,7 @@ Criar um aplicativo para consultar a API de Filmes e trazer os filmes enviados p
 ### **Essencial** ##
 * IDE Utilizada deve ser o Xcode na versão mais atual do Swift
 * O gerenciador de dependêcias deve ser o CocoaPods
-* Deve ser usada uma biblioteca para Mapeamento/Parser de JSON (ObjectiveMapper / SwiftJSON)
+* Deve ser usada uma biblioteca para Mapeamento/Parser de JSON (ObjectMapper / SwiftJSON)
 * Devem ser usados os guidelines UX e UI do iOS
 * Uso de Auto Layout Guide
 
